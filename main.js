@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 
   //check box's status so as not to override
   let boxElement = document.getElementsByClassName('box')
-
   boxSelection = boxElement.onclick;
+
   function boxSelection(){
 
     if(boxElement.classList.contains('unselectedBox')){
@@ -48,13 +48,17 @@ document.addEventListener("DOMContentLoaded",()=>{
   function checkPlayerAndSelectBox(){
     //selection by X (even)
     if(player % 2 == 0){
-      boxElement.classlist.replace('unselectedBox, selectedByX')
+      boxElement.classlist.replace('unselectedBox', 'selectedByX')
     //selection by O (odd)
     }else{
-      boxElement.classlist.replace('unselectedBox, selectedByO')
+      boxElement.classlist.replace('unselectedBox', 'selectedByO')
     }
     //box is not empty
-    boxElement.classlist.add('selectedBox')
+    // boxElement.classlist.add('selectedBox')
+  }
+
+  function checkForWin(){
+
   }
 
 });
